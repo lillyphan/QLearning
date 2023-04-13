@@ -14,4 +14,4 @@ Being model-free means that Q Learning does not need a model of the environment 
 
 ### What, if anything, is Q Learning often used for? (If you find any cool projects or research relating to Q Learning, feel free to link them to me!)
 
-I'm not sure when it is used most often but last summer I built some lego robots that used Q-Learning to travel parallel to a wall (super advanced ik..).
+I'm not sure when it is used most often but last summer I built some lego robots that used Q-Learning to travel parallel to a wall (super advanced ik..)!

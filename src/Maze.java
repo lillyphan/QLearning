@@ -22,8 +22,6 @@ public class Maze {
             }
         }
 
-        maze[start[1]][start[0]] = 3;
-
         gen(start[1], start[0]);
 
         maze[end[1]][end[0]] = 4;
@@ -61,9 +59,7 @@ public class Maze {
         }
     }
 
-    public static void main(String[] args) {
-        int w = 9, l = 9;
-        int[] start = {0, 0}, end = {8, 8};
-        Maze maze = new Maze(w, l, start, end);
+    public int[][] getMaze(){
+        return this.maze;
     }
 }

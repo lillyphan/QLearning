@@ -19,3 +19,5 @@ I'm not sure when it is used most often but last summer I built some lego robots
 # external sources
 https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
 https://rosettacode.org/wiki/Maze_generation
+https://www.digitalocean.com/community/tutorials/shuffle-array-java
+http://www.migapro.com/depth-first-search/

@@ -1,7 +1,7 @@
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
 
 public class Maze {
     private int[] directionsY = {-2, 2, 0, 0}; //can either move up, down
@@ -25,6 +25,25 @@ public class Maze {
         gen(start[1], start[0]);
 
         maze[end[1]][end[0]] = 4;
+
+        try {
+//            File newFile = new File("maze.txt");
+            FileWriter fw = new FileWriter("maze.txt");
+            for (int i = 0; i < length; i++){
+                for (int j = 0; j < width; j++){
+                    switch (maze[i][j]) {
+                        case 1 -> fw.write('0' + " ");
+                        case 0 -> fw.write('X' + " ");
+                        case 4 -> fw.write('F' + " ");
+                        default -> {
+                        }
+                    }
+                }
+                fw.write("\n");
+            }
+            fw.close();
+        } catch (java.io.IOException ignored){
+        }
 
 
         //printing maze for testing purposes

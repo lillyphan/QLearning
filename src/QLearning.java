@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
@@ -25,8 +26,7 @@ public class QLearning {
 
         ql.init();
         ql.calculateQ();
-        ql.printQ();
-        ql.printPolicy();
+        ql.saveQ();
     }
 
     public void init() {
@@ -128,7 +128,6 @@ public class QLearning {
                 }
             }
             initializeQ();
-            printR(R);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -250,6 +249,23 @@ public class QLearning {
                 System.out.printf("%6.2f ", (Q[i][j]));
             }
             System.out.println();
+        }
+    }
+
+    void saveQ() {
+        try {
+            FileWriter fw = new FileWriter("QMatrices.txt");
+            fw.write("\n\n\n");
+            for (int i = 0; i < Q.length; i++) {
+                fw.write("From state " + i + ":  ");
+                for (int j = 0; j < Q[i].length; j++) {
+                    String s = String.format("%6.2f ", (Q[i][j]));
+                    fw.write(s);
+                }
+                fw.write("\n");
+            }
+            fw.close();
+        } catch (java.io.IOException ignored){
         }
     }
 }

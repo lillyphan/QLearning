@@ -252,14 +252,15 @@ public class QLearning {
         }
     }
 
+    //saves the q matrix into the file QMatrices.txt
     void saveQ() {
         try {
             FileWriter fw = new FileWriter("QMatrices.txt");
-            fw.write("\n\n\n");
+            fw.write("\n\n\n"); //space between past matrices
             for (int i = 0; i < Q.length; i++) {
                 fw.write("From state " + i + ":  ");
                 for (int j = 0; j < Q[i].length; j++) {
-                    String s = String.format("%6.2f ", (Q[i][j]));
+                    String s = String.format("%6.2f ", (Q[i][j])); //format string
                     fw.write(s);
                 }
                 fw.write("\n");

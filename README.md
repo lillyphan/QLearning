@@ -16,7 +16,13 @@ Being model-free means that Q Learning does not need a model of the environment 
 
 I'm not sure when it is used most often but last summer I built some lego robots that used Q-Learning to travel parallel to a wall (super advanced ik..)!
 
-# external sources
+# How to use this project
+
+1. Download the files Maze.java and QLearning.java
+
+2. Run the main method within QLearning.java to generate and solve a maze. QLearning will save the corresponding QMatrix to the file QMatrices.txt
+
+# External Sources Used
 https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
 https://rosettacode.org/wiki/Maze_generation
 https://www.digitalocean.com/community/tutorials/shuffle-array-java
